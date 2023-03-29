@@ -15,7 +15,7 @@ RUN $JAVA_HOME/bin/jlink --compress=1 --strip-java-debug-attributes --no-header-
     --include-locales en,it,es,nl,fr,de,ro,pt,tr,pl,da,bg,sv \
     --output /jlinked
 
-FROM alpine:3.15
+FROM alpine:3.16
 LABEL org.opencontainers.image.source=https://github.com/alfio-event/alf.io
 
 COPY --from=zulu /jlinked /opt/jdk/
